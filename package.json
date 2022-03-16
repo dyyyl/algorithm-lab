@@ -1,0 +1,21 @@
+{
+  "name": "algorithm-lab",
+  "version": "1.0.0",
+  "description": "Let's play with some Algorithms and Data Structures!",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "jest"
+  },
+  "author": "dyyyl",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "jest": "^27.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11"
+  }
+}
