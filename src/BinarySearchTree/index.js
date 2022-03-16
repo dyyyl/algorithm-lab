@@ -143,9 +143,8 @@ export class BinarySearchTree {
     if (!node) {
       return null;
     }
-
     // If the value is less than the current node's value
-    if (value < node.value) {
+    else if (value < node.value) {
       // set the current node's left node to the result of the recursive call
       node.left = this.remove(value, node.left);
     }
