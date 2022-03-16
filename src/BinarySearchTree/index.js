@@ -208,7 +208,6 @@ export class BinarySearchTree {
    * 3. Recursively traverse the current node's right subtree.
    *
    * @param {Node} process - Callback to apply to node. Defaults as console.log.
-   * @returns {Array<Node>} - Array of nodes in the tree.
    */
   preOrderTraversal(process = console.log) {
     const preOrder = (node) => {
@@ -236,7 +235,6 @@ export class BinarySearchTree {
    * 3. Recursively traverse the current node's right subtree.
    *
    * param {Node} process - Callback to apply to node. Defaults as console.log.
-   * @returns {Array<Node>} - Array of nodes in the tree.
    */
   inOrderTraversal(process = console.log) {
     const inOrder = (node) => {
@@ -264,7 +262,6 @@ export class BinarySearchTree {
    * 3. Visit the root node.
    *
    * param {Node} process - Callback to apply to node. Defaults as console.log.
-   * @returns {Array<Node>} - Array of nodes in the tree.
    */
   postOrderTraversal(process = console.log) {
     const postOrder = (node) => {
