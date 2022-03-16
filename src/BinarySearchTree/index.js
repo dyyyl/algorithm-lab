@@ -10,16 +10,15 @@ export class BinarySearchTree {
    * @param {number} value - Value to be inserted into the tree.
    */
   insert(value) {
-    if (this.contains(value)) {
-      throw new Error("Value already exists in tree.");
-    }
-
     if (this.root === null) {
       this.root = new Node(value);
     } else {
       let current = this.root;
 
       while (true) {
+        if (value === current.value) {
+          throw new Error("Value already exists in tree.");
+        }
         // if the value is greater than the current node's value
         if (value > current.value) {
           // and there is no right node present,
