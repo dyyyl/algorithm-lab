@@ -8,6 +8,4 @@ const tree = new BinarySearchTree();
 
 VALUES.forEach((value) => tree.insert(value));
 
-tree.remove(6);
-
-console.log(tree.breadthFirstTraversal());
+tree.insert(6);

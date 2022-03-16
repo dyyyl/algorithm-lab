@@ -10,6 +10,10 @@ export class BinarySearchTree {
    * @param {number} value - Value to be inserted into the tree.
    */
   insert(value) {
+    if (this.contains(value)) {
+      throw new Error("Value already exists in tree.");
+    }
+
     if (this.root === null) {
       this.root = new Node(value);
     } else {
