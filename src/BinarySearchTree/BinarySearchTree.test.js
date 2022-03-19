@@ -56,4 +56,21 @@ describe("BinarySearchTree", () => {
 
     expect(height).toBe(expectedHeight);
   });
+
+  it("can tell you whether it is balanced", () => {
+    const expectedBalanced = true;
+
+    const balanced = tree.isBalanced();
+
+    expect(balanced).toBe(expectedBalanced);
+  });
+
+  it("can tell you whether it is unbalanced", () => {
+    const expectedUnbalanced = false;
+    tree.insert(44);
+
+    const unbalanced = tree.isBalanced();
+
+    expect(unbalanced).toBe(expectedUnbalanced);
+  });
 });

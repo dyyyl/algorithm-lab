@@ -132,6 +132,41 @@ export class BinarySearchTree {
   }
 
   /**
+   * @returns {boolean} Whether or not the tree is balanced.
+   */
+  isBalanced() {
+    // bind getHeight from `this` to local scope
+    const localGetHeight = this.getHeight;
+
+    /**
+     * Recursive function to find the balanced state of the tree from a given node.
+     * @param {Node} node - Node to start recursion from.
+     *
+     * @returns {boolean} balanced state of the tree from node entry.
+     */
+    const balanced = function (node) {
+      if (node === null) {
+        return true; // nullcheck for style
+      }
+
+      const heightDifference = Math.abs(
+        localGetHeight(node.left) - localGetHeight(node.right)
+      );
+
+      // if the height difference is greater than 1, the tree is not balanced
+      if (heightDifference !== 0) {
+        return false;
+      } else {
+        // otherwise, recursively call the function on the left and right nodes to find the balanced state of each
+        return balanced(node.left) && balanced(node.right);
+      }
+    };
+
+    // return the result of the recursive function, beginning at the root
+    return balanced(this.root);
+  }
+
+  /**
    * Takes a value and removes it from the tree.
    * @param {number} value - Value to be removed from the tree.
    * @param {Node} node - Node to start the search from. (defaults to root)
