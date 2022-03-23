@@ -15,6 +15,7 @@ export class BinarySearchTree {
     } else {
       let current = this.root;
 
+      // https://www.youtube.com/watch?v=PGNiXGX2nLU
       while (true) {
         if (value === current.value) {
           throw new Error("Value already exists in tree.");
